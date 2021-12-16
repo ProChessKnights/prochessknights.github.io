@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
-  <body
- <div style="border: 5px solid green; width: 65%; height: 600px;">
-    <div id=0></div>
-    <div id=1></div>
-    <div id=2></div>
-    <div id=3></div>
-    <div id=4></div>
-    <div id=5></div>
-    <div id=6></div>
-    <div id=7></div>
-    <div id=8></div>
-    <div id=9></div>
-    <div id=10></div>
-    <div id=11></div>
-    <div id=12></div>
-    <div id=13></div>
-    <div id=14></div>
-    <div id=15></div>
-    <div id=16></div>
-    <div id=17></div>
-    <div id=18></div>
-    <div id=19></div>
-    <div id=20></div>
-    <div id=21></div>
-    <div id=22></div>
-    <div id=23></div>
-    <div id=24></div>
-    <div id=25></div>
-    <div id=26></div>
-    <div id=27></div>
-    <div id=28></div>
-    <div id=29 class="sdiv"></div>
-  </div>
-        <p id="stime" class="time"></p>
-        <p id="mtime" class="time"></p>
-  </div>
-  
-<style>
-  .time{
-  float:right;
-  border:1px solid black;
-  color:blue;
-  height: 25px;
-  padding: 10px;
-  }
-  .sdiv{
-  background-color:gray;
-  border:1px solid black;
-  float:10px;
-  margin:10px;
-  height:75px;
-  width:8%;
-  }
-</style>
-  
-  <script>
-    var stime = 0;
-var mtime = 0;
 
-function timer() {
-    stime += 1
-    console.log(mtime, stime);
+<head>
+    <style>
+        .time {
+            float: left;
+            border: 1px solid black;
+            color: blue;
+            height: 25px;
+            padding: 10px;
+        }
 
-    if (stime == 60) {
-        stime = 0;
-        mtime += 1
-    }
-    var sectime = document.getElementById("stime");
-    var mintime = document.getElementById("mtime");
-  
-    sectime.innerHTML = stime;
-    mintime.innerHTML = mtime;
-}
+        .sdiv {
+            background-color: gray;
+            border: 1px solid black;
+            float: left;
+            margin: 10px;
+            height: 100px;
+            width: 12%;
+        }
+    </style>
+</head>
 
-setInterval(timer, "1000")
-  </script>
-  </body>
+<body>
+
+    <div style="height: 75px">
+        <p id="mtime" class="time">0</p>
+        <p id="stime" class="time">0</p>
+    </div>
+
+    <div style="border: 5px solid green; width: 600px; height: 620px;">
+        <div id=0 class="sdiv"></div>
+        <div id=1 class="sdiv"></div>
+        <div id=2 class="sdiv"></div>
+        <div id=3 class="sdiv"></div>
+        <div id=4 class="sdiv"></div>
+        <div id=5 class="sdiv"></div>
+        <div id=6 class="sdiv"></div>
+        <div id=7 class="sdiv"></div>
+        <div id=8 class="sdiv"></div>
+        <div id=9 class="sdiv"></div>
+        <div id=10 class="sdiv"></div>
+        <div id=11 class="sdiv"></div>
+        <div id=12 class="sdiv"></div>
+        <div id=13 class="sdiv"></div>
+        <div id=14 class="sdiv"></div>
+        <div id=15 class="sdiv"></div>
+        <div id=16 class="sdiv"></div>
+        <div id=17 class="sdiv"></div>
+        <div id=18 class="sdiv"></div>
+        <div id=19 class="sdiv"></div>
+        <div id=20 class="sdiv"></div>
+        <div id=21 class="sdiv"></div>
+        <div id=22 class="sdiv"></div>
+        <div id=23 class="sdiv"></div>
+        <div id=24 class="sdiv"></div>
+        <div id=25 class="sdiv"></div>
+        <div id=26 class="sdiv"></div>
+        <div id=27 class="sdiv"></div>
+        <div id=28 class="sdiv"></div>
+        <div id=29 class="sdiv"></div>
+    </div>
+
+    <script>
+        var stime = 0;
+        var mtime = 0;
+
+        function timer() {
+            stime += 1
+
+            if (stime == 60) {
+                stime = 0;
+                mtime += 1
+            }
+            var sectime = document.getElementById("stime");
+            var mintime = document.getElementById("mtime");
+
+            sectime.innerHTML = stime;
+            mintime.innerHTML = mtime;
+        }
+
+        setInterval(timer, "1000")
+    </script>
+</body>
+
 </html>
